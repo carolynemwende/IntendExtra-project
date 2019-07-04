@@ -11,8 +11,10 @@ import android.widget.TextView;
 
 public class ReceiverActivity extends AppCompatActivity {
 
-    TextView textmess;
-    TextView textint;
+    TextView tvName;
+    TextView tvAge;
+    String name;
+    String age;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,13 +23,22 @@ public class ReceiverActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        String text= getIntent().getStringExtra("mytext");
-         textmess =(TextView)findViewById(R.id.tvName);
-         textmess.setText(text);
 
-         String age= getIntent().getStringExtra("myage");
-        textint= (TextView)findViewById(R.id.tvAge);
-        textint.setText(age);
+
+
+        tvName=findViewById(R.id.tvName);
+        tvAge=findViewById(R.id.etAge);
+
+
+
+        String text= getIntent().getStringExtra("mytext");
+         tvName =(TextView)findViewById(R.id.tvName);
+         tvName.setText(text);
+
+
+         String age=getIntent().getStringExtra("myage");
+         tvAge=(TextView)findViewById(R.id.tvAge);
+          tvAge.setText(age);
 
 
 

@@ -34,24 +34,20 @@ public class MainActivity extends AppCompatActivity {
         etAge= findViewById(R.id.etAge);
         etName= findViewById(R.id.etName);
 
-
-
-        Button btnButton = (Button)findViewById(R.id.btnSend);
+        Button btnButton= findViewById(R.id.btnSend);
         btnButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                //i can use anything inplace of name
-//                Intent name = new Intent(MainActivity.this, ReceiverActivity.class);
-//                startActivity(name);
-//
-              String text = etName.getText().toString();
-              String age = etAge.getText().toString();
+                  String text = etName.getText().toString();
+                  String age = etAge.getText().toString();
 
 
-                Intent myIntent = new Intent(view.getContext(),ReceiverActivity.class);
-                myIntent.putExtra("mytext",text);
-                startActivity(myIntent);
+                Intent Name = new Intent(view.getContext(),ReceiverActivity.class);
+                Name.putExtra("myage",age);
+                Name.putExtra("mytext",text);
+                startActivity(Name);
+
 
 
 
